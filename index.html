@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login | Plant Care Reminder</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="auth-page">
+  <main class="auth-card">
+    <div class="auth-brand"><span class="brand-mark">✿</span><span>Plant Care Reminder</span></div>
+    <p class="eyebrow">WELCOME BACK</p><h1>Login to your account</h1><p class="muted">Keep your plants happy with a little daily care.</p>
+    <form id="loginForm" novalidate>
+      <label for="email">Email address</label><input type="email" id="email" autocomplete="username" placeholder="you@example.com" required>
+      <label for="password">Password</label><input type="password" id="password" autocomplete="current-password" placeholder="Enter your password" required>
+      <label class="password-toggle"><input type="checkbox" id="showPassword"> Show password</label>
+      <div id="message" class="msg" aria-live="polite"></div>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <p class="auth-foot">New to Plant Care Reminder? <a href="register.html">Create an account</a></p>
+  </main>
+  <script src="js/storage.js"></script><script src="js/auth.js"></script>
+</body></html>

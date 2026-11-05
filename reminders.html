@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Reminders | Plant Care Reminder</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <div class="layout"><aside class="sidebar" id="sidebar"></aside>
+    <main class="main-content">
+      <header class="page-header"><div><p class="eyebrow">STAY ON TRACK</p><h1>Reminders</h1><p class="muted">A little reminder helps your plants stay healthy.</p></div><button class="btn" id="addBtn">＋ New reminder</button></header>
+      <section class="panel notification-panel"><div><strong>Browser notifications</strong><p class="muted">Get a notification when a reminder is due while this website is open.</p></div><label class="switch-label" for="notifyBox"><input type="checkbox" id="notifyBox"> Enable notifications</label></section>
+      <section class="panel hidden" id="remForm">
+        <div class="section-heading"><div><h2 id="formTitle">New reminder</h2><p class="muted">Choose a plant, care activity and schedule.</p></div></div>
+        <form id="form" novalidate><input type="hidden" id="rId">
+          <div class="form-grid">
+            <div><label for="rType">Reminder type</label><select id="rType"><option>Watering</option><option>Fertilizer</option><option>Sunlight</option></select></div>
+            <div><label for="rPlant">Plant</label><select id="rPlant" required></select></div>
+            <div><label for="rDate">Date</label><input type="date" id="rDate" required></div>
+            <div><label for="rTime">Time</label><input type="time" id="rTime" required></div>
+            <div id="freqBox"><label for="rFreq">Frequency</label><select id="rFreq"></select></div>
+            <div><label for="rNotes">Notes (optional)</label><input id="rNotes" placeholder="e.g. Use half a cup of water"></div>
+          </div>
+          <div id="formMsg" class="msg"></div><div class="form-actions"><button class="btn" type="submit">Save reminder</button><button class="btn btn-outline" type="button" id="cancelBtn">Cancel</button></div>
+        </form>
+      </section>
+      <section class="panel">
+        <div class="section-heading"><div><h2>Your reminders</h2><p class="muted">Track upcoming, completed and overdue tasks.</p></div></div>
+        <div class="filters" id="statusFilters"></div>
+        <div class="filter-row"><select id="typeFilter" aria-label="Filter by reminder type"><option value="">All categories</option><option>Watering</option><option>Fertilizer</option><option>Sunlight</option></select><input id="search" type="search" placeholder="Search by plant name"></div>
+        <div id="list"></div>
+      </section>
+      <footer class="page-footer">Made with care <span>♥</span> for your little green corner.</footer>
+    </main>
+  </div>
+  <script src="js/storage.js"></script><script src="js/reminders.js"></script>
+</body></html>

@@ -1,0 +1,31 @@
+PLANT CARE REMINDER - AUTOMATED TEST REPORT
+Date: 30 October 2026
+
+RESULTS
+- Previously recorded project checks: 51 passed, 0 failed.
+- New plant-photo checks: 18/18 library entries have unique, non-empty real-photo URLs and source links.
+- JavaScript syntax checks: 6/6 files passed Node syntax validation.
+
+COVERAGE
+- All HTML pages reference existing local scripts, styles and page links.
+- Required controls/IDs exist on each page.
+- All six JavaScript files pass Node syntax checks.
+- The plant library contains 18 unique entries and all 18 entries have a distinct real-photo URL.
+- Photo-source links are included for all 18 entries (Unsplash/plant reference pages or Wikimedia Commons).
+- Existing built-in plants using the old SVG placeholder are upgraded to their catalogue photo; user uploads are preserved.
+- User-specific LocalStorage separation was checked.
+- Reminder completion, daily interval recurrence, monthly month-end recurrence,
+  overdue/completed status and one-time notification logic were checked.
+- Registration validation, duplicate email handling, password mismatch/length,
+  login success/failure and password visibility toggle logic were checked.
+
+LIMITATION
+A full browser-driven end-to-end test (clicking through every screen in a real browser)
+could not be completed in the build environment because Chromium navigation was blocked
+by the environment. Please run the acceptance checklist in README.txt using VS Code Live
+Server on your own computer before presenting the project. All 18 remote plant photos require an internet connection. Their URLs were sourced from real-photo entries
+on Unsplash or Wikimedia Commons pages, but image loading still depends on those hosts being reachable
+from the user's browser.
+
+This is an educational frontend demo. Authentication is LocalStorage-based and is not
+suitable for real accounts or sensitive information.

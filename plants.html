@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Plants | Plant Care Reminder</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <div class="layout"><aside class="sidebar" id="sidebar"></aside>
+    <main class="main-content">
+      <header class="page-header"><div><p class="eyebrow">YOUR COLLECTION</p><h1>My Plants</h1><p class="muted">Keep all your plants and their details in one place.</p></div><button class="btn" id="addBtn">＋ Add plant</button></header>
+      <section class="panel library-panel">
+        <div class="section-heading"><div><h2>Plant library</h2><p class="muted">Choose from these common plants and add one to your collection.</p></div><div class="search-wrap"><input id="librarySearch" type="search" placeholder="Find a plant..."></div></div>
+        <div class="library-grid" id="libraryGrid"></div>
+      </section>
+      <section class="panel hidden" id="plantForm">
+        <div class="section-heading"><div><h2 id="formTitle">Add a plant</h2><p class="muted">Enter a few details about your plant.</p></div></div>
+        <form id="form" novalidate><input type="hidden" id="plantId">
+          <div class="form-grid">
+            <div><label for="pName">Plant name</label><input id="pName" required placeholder="e.g. Money Plant"></div>
+            <div><label for="pType">Plant type</label><select id="pType"><option>Indoor Plant</option><option>Outdoor Plant</option><option>Flowering Plant</option><option>Succulent</option><option>Herb</option><option>Other</option></select></div>
+            <div><label for="pImage">Plant image (optional)</label><input type="file" id="pImage" accept="image/*"><small class="field-note">Choose an image from your device. A default image is used if left empty.</small></div>
+            <div><label for="pDate">Date added</label><input type="date" id="pDate" required></div>
+          </div>
+          <div id="formMsg" class="msg"></div><div class="form-actions"><button class="btn" type="submit">Save plant</button><button class="btn btn-outline" type="button" id="cancelBtn">Cancel</button></div>
+        </form>
+      </section>
+      <section class="panel hidden" id="details"></section>
+      <section class="panel">
+        <div class="section-heading"><div><h2>All plants</h2><p class="muted">Select a plant to see its details.</p></div><div class="search-wrap"><input id="search" type="search" placeholder="Search plants..."></div></div>
+        <div class="plant-grid" id="plantGrid"></div>
+      </section>
+      <footer class="page-footer">Made with care <span>♥</span> for your little green corner.</footer>
+    </main>
+  </div>
+  <script src="js/storage.js"></script><script src="js/plants.js"></script>
+</body></html>
